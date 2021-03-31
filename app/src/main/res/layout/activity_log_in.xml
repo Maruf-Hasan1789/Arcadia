@@ -27,7 +27,7 @@
 
 
         <EditText
-            android:id="@+id/user_mail"
+            android:id="@+id/user_mail_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -50,7 +50,7 @@
             android:padding="10dp" />
 
         <TextView
-            android:id="@+id/clicksignup"
+            android:id="@+id/clicklogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
