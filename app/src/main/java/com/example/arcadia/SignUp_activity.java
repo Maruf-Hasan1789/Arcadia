@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUp_activity extends AppCompatActivity {
 
     EditText username,userpass,usermail;
-    Button signupbtn;
+    Button signupbtn,clicksignin_btn;
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
     @Override
@@ -32,6 +32,7 @@ public class SignUp_activity extends AppCompatActivity {
         username=findViewById(R.id.username_signup);
         userpass=findViewById(R.id.user_pass_sign_up);
         signupbtn=findViewById(R.id.signup_button);
+        clicksignin_btn=findViewById(R.id.click_sign_in_btn);
         progressBar=findViewById(R.id.signup_progressbar);
         firebaseAuth=FirebaseAuth.getInstance();
 
@@ -81,11 +82,17 @@ public class SignUp_activity extends AppCompatActivity {
                     else
                     {
                         Toast.makeText(SignUp_activity.this,"Error "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                     }
                     }
                 });
             }
         });
-
+        clicksignin_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),LogInActivity.class));
+            }
+        });
     }
 }

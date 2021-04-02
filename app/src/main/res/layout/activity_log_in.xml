@@ -39,7 +39,7 @@
             android:padding="10dp" />
 
         <EditText
-            android:id="@+id/user_pass"
+            android:id="@+id/user_pass_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,18 +49,8 @@
             android:inputType="textPassword"
             android:padding="10dp" />
 
-        <TextView
-            android:id="@+id/clicklogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:padding="3dp"
-            android:text="Don't have an account.Click here for signup" />
-
         <Button
-            android:id="@+id/sign_in_button"
+            android:id="@+id/log_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -68,35 +58,20 @@
             android:padding="12dp"
             android:text="Log in" />
 
-        <LinearLayout
+        <ProgressBar
+            android:id="@+id/progressBar_login"
+            style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="25dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/donthaveaccount_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:text="Don't have an account?" />
 
-            <Button
-                android:id="@+id/gogle_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-
-                android:padding="12dp"
-                android:text="sign up using Google"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/fb_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_blue_bright"
-
-                android:padding="12dp"
-                android:text="sign up using facebook" />
-
-        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
